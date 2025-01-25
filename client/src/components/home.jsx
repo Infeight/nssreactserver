@@ -26,31 +26,31 @@ useEffect(()=>{
 
 
 const getEvents = async() =>{
-    const data = await fetch('http://localhost:5001/events');
+    const data = await fetch('https://nssadminserver.onrender.com/events');
     const allevents = await data.json()
     setEvedata(allevents);
 }
 
 const getevePdf = async()=>{
-    const data = await fetch('http://localhost:5001/eventpdf');
+    const data = await fetch('https://nssadminserver.onrender.com/eventpdf');
     const allpdfs = await data.json()
     setEvepdf(allpdfs);
 }
 
 const getUpeves = async()=>{
-    const data = await fetch('http://localhost:5001/upevents');
+    const data = await fetch('https://nssadminserver.onrender.com/upevents');
     const allupeves = await data.json()
     setUpeve(allupeves);
 }
 
 const getExps = async()=>{
-    const data = await fetch('http://localhost:5001/experience');
+    const data = await fetch('https://nssadminserver.onrender.com/experience');
     const allExps = await data.json()
     setExps(allExps);
 }
 
 const getSneaks = async()=>{
-    const data = await fetch('http://localhost:5001/sneakpeaks');
+    const data = await fetch('https://nssadminserver.onrender.com/sneakpeaks');
     const allsneaks = await data.json()
     setSneakpeaks(allsneaks);
 }
@@ -62,14 +62,14 @@ const deleteeve = async(e)=>{
 
     const detail=   {name: e.target.closest('.alleventdisp').querySelector(".eventname").innerText}
       e.target.closest('.alleventdisp').style.opacity = "10%"
-       await fetch ('http://localhost:5001/deleteevent',{method:'post',headers:{"Content-Type": "application/json" },body:JSON.stringify(detail)})
+       await fetch ('https://nssadminserver.onrender.com/deleteevent',{method:'post',headers:{"Content-Type": "application/json" },body:JSON.stringify(detail)})
     //    setdeleve(deleve=> !deleve)
     }
     const deletepdf = async(e)=>{
        e.target.closest('.alleventdisp').style.opacity = "10%"
       const detail=   {name: e.target.closest('.alleventdisp').querySelector(".eventname").innerText}
       
-         await fetch ('http://localhost:5001/deletepdf',{method:'post',headers:{"Content-Type": "application/json" },body:JSON.stringify(detail)})
+         await fetch ('https://nssadminserver.onrender.com/deletepdf',{method:'post',headers:{"Content-Type": "application/json" },body:JSON.stringify(detail)})
         //  setdelpdf(delpdf=> !delpdf)
       }
     
@@ -77,7 +77,7 @@ const deleteeve = async(e)=>{
         e.target.closest('.alleventdisp').style.opacity = "10%"
         const detail=   {Title: e.target.closest('.alleventdisp').querySelector(".eventname").innerText}
         
-           await fetch ('http://localhost:5001/deleteupevent',{method:'post',headers:{"Content-Type": "application/json" },body:JSON.stringify(detail)})
+           await fetch ('https://nssadminserver.onrender.com/deleteupevent',{method:'post',headers:{"Content-Type": "application/json" },body:JSON.stringify(detail)})
         //    setdelupeve(delupeve=> !delupeve)
         }
     
@@ -85,7 +85,7 @@ const deleteeve = async(e)=>{
    e.target.closest('.alleventdisp').style.opacity = "10%"
           const detail=   {name: e.target.closest('.alleventdisp').querySelector(".eventname").innerText}
           
-             await fetch ('http://localhost:5001/deletesneak',{method:'post',headers:{"Content-Type": "application/json" },body:JSON.stringify(detail)})
+             await fetch ('https://nssadminserver.onrender.com/deletesneak',{method:'post',headers:{"Content-Type": "application/json" },body:JSON.stringify(detail)})
             //  setdelsneak(delsneak=> !delsneak)
           }
     
@@ -98,7 +98,7 @@ const deleteeve = async(e)=>{
             Exp: e.target.closest('.alleventdisp').querySelector(".eventname").innerText
           }
           
-             await fetch ('http://localhost:5001/deleteexp',{method:'post',headers:{"Content-Type": "application/json" },body:JSON.stringify(detail)})
+             await fetch ('https://nssadminserver.onrender.com/deleteexp',{method:'post',headers:{"Content-Type": "application/json" },body:JSON.stringify(detail)})
             //  setdelexp(delexp=> !delexp)
           }
 
@@ -115,7 +115,7 @@ const deleteeve = async(e)=>{
     <h1 style={{margin:"1vw auto", textAlign: "center"}}>NSS ADMIN PAGE</h1>
 <div className="events" id="events">
 <h2>Events</h2>
-    <form action="http://localhost:5001/uploadimg" method="post" encType="multipart/form-data">
+    <form action="https://nssadminserver.onrender.com/uploadimg" method="post" encType="multipart/form-data">
         <input type="text" id="eventname" name="name" placeholder="Enter event name"/>
         <textarea type="text" id="eventdes"  name="event" placeholder="Enter event description"></textarea>
         <input type="file" id="eventpic" className="files" name="testImage" placeholder="Choose an image to display for the event"/>
@@ -127,7 +127,7 @@ const deleteeve = async(e)=>{
      <div className="events" id="pdf">
         <h2>Event pdf</h2>
    
-    <form action="http://localhost:5001/uploadpdf" method="post" encType="multipart/form-data">
+    <form action="https://nssadminserver.onrender.com/uploadpdf" method="post" encType="multipart/form-data">
         <input type="text" id="eventpdfname" name="name" placeholder="Enter event name"/>
         <input type="file" className="files" id="eventpdf"  name="testpdf" placeholder="Choose an image to display for the event"/>
         <button id="submitpdf" type="submit" className='submitevent'>Upload</button>
@@ -138,7 +138,7 @@ const deleteeve = async(e)=>{
     <h2>Up coming Events</h2>
 
 
-    <form action="http://localhost:5001/upevents" method="post" encType="multipart/form-data">
+    <form action="https://nssadminserver.onrender.com/upevents" method="post" encType="multipart/form-data">
         <input type="text" name="name" id="upevename" placeholder="Enter event name"/>
         <input type="date" name="date" id="upevedate" placeholder="Enter event date"/>
         <textarea name="eventdes" id="upevedes" placeholder="Enter event description"></textarea>
@@ -152,7 +152,7 @@ const deleteeve = async(e)=>{
     <h2>Sneak peaks</h2>
 
 
-    <form action="http://localhost:5001/sneakupload" method="post" encType="multipart/form-data">
+    <form action="https://nssadminserver.onrender.com/sneakupload" method="post" encType="multipart/form-data">
         <input type="text" name="name" id="upevename" placeholder="Enter event name"/>
         <input type="file" className="files" id="upeveimg" name="testImage2" placeholder="Choose an image to display for the event"/>
         <button type="submit" id="upevesubmit" className='submitevent'>Upload</button>
