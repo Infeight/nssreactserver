@@ -1,0 +1,366 @@
+body{
+    
+    margin: 0;
+    padding: 0;
+}
+.all{
+    display: flex;
+    width: 100vw;
+    margin: 0;
+    height: auto;
+    justify-content: space-evenly;
+}
+.uploads{
+    position: relative;
+    width: 45%;
+    left: 1vw;
+    height: auto;
+    /* display: flex; */
+    padding: 10px;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: space-evenly;
+}
+.uploads h1{
+    margin: 1vw auto;
+    text-align: center;
+    font-size: 2vw;
+}
+.display{
+    width: 50%;
+    top: 1vw;
+    height: auto;
+}
+.display h2{
+    margin: 0;
+    text-align: center;
+    font-family: monospace;
+    font-size: 2vw;
+    background-color: white;
+    z-index: 2;
+    /* position: fixed; */
+    position: sticky;
+    top: 0vw;
+}
+.events{
+    width: 40vw;
+    height: 25vw;
+    margin-bottom: 4vw;
+    border: none;
+    box-shadow: 0 0 5px black;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+}
+.events h2{
+    font-size: 1.5vw;
+    margin: 0;
+    color:#f9a000;
+    font-family: monospace;
+}
+.events form{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+.events form input{
+    
+        font-size: 1.5vw;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        box-shadow: 0 0 2px black inset;
+        box-sizing: border-box;
+        padding: 5px;
+        font-family: monospace;
+       cursor: pointer;
+}
+.events form textarea{
+    min-height: 15vw;
+    font-size: 1.5vw;
+    border-radius: 5px;
+    box-shadow: 0 0 2px black inset;
+    border: none;
+    outline: none;
+    max-height: 15vw;
+    box-sizing: border-box;
+    padding: 5px;
+    font-family: monospace;
+}
+.fileload{
+    font-size: 1.2vw;
+    box-shadow: 0 0 4px black;
+    background-color: orange;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-family: monospace;
+}
+button{
+    border: none;
+    outline: none;
+    box-shadow: 0 0 2px black;
+    border-radius: 5px;
+    font-size: 1vw;
+    background-color: #fff;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(255, 140, 140);
+    
+}
+.submitevent{
+    background-color: #f9a000;
+    background-color: #f9a000;
+    width: 8vw;
+    font-size: 1.2vw;
+   transition-duration: 0.2s;
+   box-shadow: none;
+   top: -0.5vw;
+   position: relative;
+}
+.submitevent:hover{
+    background-color: #f9a000;
+    box-shadow: 0.8px 0.7px 6.7px hsl(0deg 0% 0% / 0.44);
+   transition-duration: 0.2s;
+
+}
+
+#events{
+    height: 30vw;
+    border-color: rgb(0, 221, 255);
+    width: 100%;
+}
+
+#pdf{
+    height: 15vw;
+    border-color: rgb(217, 0, 255);
+    width: 100%;
+}
+#upevents{
+    height: 35vw;
+    border-color: rgb(255, 247, 0);
+    width: 100%;
+}
+#sneakpeak {
+    width: 50%;
+    height: 20vw;
+    width: 100%;
+}
+
+.eventsdisp{
+    margin-bottom: 1vw;
+    width: 95%;
+    margin: 1vw auto;
+    height: 30vw;
+    box-sizing: border-box;
+    padding: 0px;
+    font-size: 1.2vw;
+    box-shadow: 0 0 5px black;
+    overflow-y: scroll;
+}
+
+.eventsdisp iframe{
+    border: none;
+    width: 100%;
+    height: 70%;
+    position: relative;
+    top: 3vw;
+}
+
+.alleventdisp{
+    height: auto;
+    width: 90%;
+    margin: auto;
+    background-color: #fff4e0;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: sans-serif;
+    font-size: 1.5vw;
+    margin-bottom: 0.5vw;
+}
+.eventname{
+    min-width: 50%;
+    font-size: 1.2vw;
+}
+.stuname{
+    min-width: 40%;
+   font-size: 1.2vw; 
+}
+
+@media screen and (min-width:1025px) {
+    @media screen and (max-width:1400px) {
+        #pdf{
+            height: 20vw;
+        }
+        #upevents{
+            height: 40vw;
+        }
+        #sneakpeak{
+            width: 100%;
+            height: 40vw;
+        }
+    }
+}
+@media screen and (min-width:700px) {
+    @media screen and (max-width:1024px){
+        .all{
+            flex-direction: column;
+            width: 100%;
+        }
+        .uploads{
+            flex-direction: column;
+            flex-wrap: nowrap;
+            width: 96%;
+            left: 0.5vw;
+        }
+        .uploads h1{
+            position: relative;
+            left: 0;
+            top: 0;
+            display: block;
+        }
+        .display{
+            width: 100%;
+        }
+        #events{
+            height: 42vw;
+            width: 100%;
+            
+        }
+    #pdf{
+        height: 25vw;
+        width: 100%;
+
+    }
+    #upevents{
+            width: 100%;
+            height: 45vw;
+    }
+    #sneakpeak{
+        width: 100%;
+        height: 30vw;
+    }
+    button{
+        font-size: 2.2vw;
+    }
+    .submitevent{
+        width: 12vw;
+        font-size: 2.5vw;
+    }
+    .events h2{
+        font-size: 2.5vw;
+    }
+    .events form input{
+        font-size: 2.5vw;
+    }
+    .events form textarea {
+        font-size: 2.5vw;
+    }
+    .display h2{
+        font-size: 3vw
+    }
+    .alleventdisp{
+        font-size: 2vw;
+    }
+    .eventsdisp{
+        margin: 3vw auto;
+        height: 50vw;
+    }
+    .eventname{
+        font-size: 2.5vw;
+    }
+   
+}}
+@media screen and (max-width:480px) {
+    .all{
+        flex-direction: column;
+    }
+    .uploads{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .uploads h1{
+        position: relative;
+        left: 0;
+        top: 0;
+        display: block;
+        font-size: 5vw;
+    }
+    body{
+        flex-direction: column;
+    }
+    .uploads{
+        width: 95%;
+        margin: auto;
+        font-size: 2.5vw;
+    }
+    .events{
+        margin-bottom: 10vw;
+    }
+    .events h2{
+        font-size: 4vw;
+    }
+    .display{
+        width: 95%;
+        margin: auto;
+        margin: 2.5vw;
+    }
+    .display h1{
+        font-size: 5vw;
+    }
+    #events{
+        width: 100%;
+        height: 60vw;
+    }
+    #pdf{
+        width: 100%;
+        height: 50vw;
+    }
+    #upevents{
+        width: 100%;
+        height: 75vw;
+    }
+    #sneakpeak{
+        width: 100%;
+        height: 50vw;
+    }
+    button{
+        font-size: 3.5vw;
+    }
+    .submitevent{
+        width: 16vw;
+        font-size: 3.5vw;
+    }
+    .events form input{
+        font-size: 4.5vw;
+    }
+    .events form textarea {
+        font-size: 4.5vw;
+    }
+    .display h2{
+        font-size: 5vw
+    }
+    .alleventdisp{
+        font-size: 3.5vw;
+        margin-bottom: 1vw;
+    }
+    .eventsdisp{
+        height: 80vw;
+        width: 100%;
+        margin: 4vw auto;
+        box-shadow: 0.8px 0.7px 6.7px hsl(0deg 0% 0% / 0.44);
+    }
+    .eventname{
+        font-size: 3.5vw;
+    }
+    .stuname{
+        font-size: 3.5vw;
+    }
+}
