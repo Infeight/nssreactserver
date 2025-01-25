@@ -8,6 +8,6 @@ export default defineConfig({
     host: true,
     strictPort: true,
     port: 8000,
-    allowedHosts:'nssreactserver-1.onrender.com'
+    // allowedHosts:'nssreactserver-1.onrender.com'
   },
 })
